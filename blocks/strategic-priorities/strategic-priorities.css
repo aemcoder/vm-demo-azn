@@ -1,0 +1,153 @@
+/* Strategic Priorities Block
+ * Migrated from: https://www.astrazeneca.com/our-therapy-areas/oncology.html
+ * Two-column offset layout with text content and featured image
+ */
+
+.strategic-priorities {
+  /* Design tokens extracted from source */
+  --sp-text-color: #3c4242;
+  --sp-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sp-heading-size: 18px;
+  --sp-heading-weight: 300;
+  --sp-heading-line-height: 1.22;
+  --sp-body-size: 14px;
+  --sp-body-line-height: 1.43;
+  --sp-gap: 32px;
+  --sp-vertical-spacing: 10px;
+
+  font-family: var(--sp-font-family);
+  color: var(--sp-text-color);
+  font-size: var(--sp-body-size);
+  line-height: var(--sp-body-line-height);
+}
+
+.strategic-priorities > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-gap);
+}
+
+.strategic-priorities > div > div {
+  font-family: var(--sp-font-family);
+  color: var(--sp-text-color);
+  font-size: var(--sp-body-size);
+  line-height: var(--sp-body-line-height);
+}
+
+/* Left column - text content */
+.strategic-priorities > div > div:first-child {
+  order: 1;
+}
+
+/* Right column - image/media */
+.strategic-priorities > div > div:last-child {
+  order: 0;
+}
+
+/* Typography - using higher specificity to override base styles */
+.strategic-priorities.block h3,
+.strategic-priorities h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #3c4242;
+  margin: 10px 0;
+}
+
+.strategic-priorities.block h3 strong,
+.strategic-priorities.block h3 b,
+.strategic-priorities h3 strong,
+.strategic-priorities h3 b {
+  font-weight: 700;
+}
+
+.strategic-priorities.block p,
+.strategic-priorities p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4242;
+  margin: 10px 0;
+}
+
+.strategic-priorities.block p strong,
+.strategic-priorities.block p b,
+.strategic-priorities p strong,
+.strategic-priorities p b {
+  font-weight: 700;
+}
+
+/* List styling */
+.strategic-priorities.block ul,
+.strategic-priorities ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4242;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.strategic-priorities.block ul li,
+.strategic-priorities ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.strategic-priorities ul li::marker {
+  color: #3c4242;
+}
+
+/* Image column */
+.strategic-priorities img {
+  width: 100%;
+  max-width: 396px;
+  height: auto;
+  display: block;
+}
+
+.strategic-priorities .strategic-priorities-img-col {
+  order: 0;
+}
+
+.strategic-priorities .strategic-priorities-img-col img {
+  display: block;
+}
+
+/* Separator/spacer */
+.strategic-priorities hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 16px 0;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .strategic-priorities > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .strategic-priorities > div > div {
+    order: unset;
+  }
+
+  /* Offset layout: left column ~57%, right column ~35% to match source */
+  .strategic-priorities > div > div:first-child {
+    flex: 0 0 57%;
+    max-width: 57%;
+    order: unset;
+  }
+
+  .strategic-priorities > div > div:last-child {
+    flex: 0 0 35%;
+    max-width: 35%;
+    order: unset;
+  }
+
+  .strategic-priorities .strategic-priorities-img-col {
+    order: unset;
+  }
+}
