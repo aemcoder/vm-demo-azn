@@ -1,0 +1,150 @@
+/* Strategic Priorities Block - Design tokens extracted from AstraZeneca */
+
+/* Override section max-width constraint for this block */
+.section:has(.strategic-priorities) > div {
+  max-width: 1280px;
+  padding: 0;
+}
+
+.strategic-priorities {
+  --sp-text-color: rgb(60, 66, 66);
+  --sp-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sp-heading-size: 18px;
+  --sp-heading-weight: 300;
+  --sp-heading-line-height: 22px;
+  --sp-intro-size: 18px;
+  --sp-intro-line-height: 22px;
+  --sp-paragraph-size: 14px;
+  --sp-paragraph-line-height: 20px;
+  --sp-container-padding: 0 20px;
+  --sp-gap: 40px;
+  --sp-left-col-width: 54%;
+  --sp-right-col-width: 46%;
+
+  font-family: var(--sp-font-family);
+  color: var(--sp-text-color);
+  padding: 0 20px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.strategic-priorities > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-gap);
+  padding-bottom: 24px;
+}
+
+.strategic-priorities > div > div {
+  order: 1;
+}
+
+.strategic-priorities > div > .strategic-priorities-media-col {
+  order: 0;
+}
+
+/* First column - intro text and priorities list */
+.strategic-priorities > div > div:first-child h3 {
+  font-size: var(--sp-intro-size);
+  font-weight: var(--sp-heading-weight);
+  line-height: var(--sp-intro-line-height);
+  color: var(--sp-text-color);
+  margin: 10px 0;
+}
+
+.strategic-priorities > div > div:first-child h3 strong {
+  font-weight: 700;
+}
+
+.strategic-priorities > div > div:first-child p {
+  font-size: var(--sp-paragraph-size);
+  line-height: var(--sp-paragraph-line-height);
+  color: var(--sp-text-color);
+  margin: 10px 0;
+}
+
+.strategic-priorities > div > div:first-child h4 {
+  font-size: var(--sp-heading-size);
+  font-weight: var(--sp-heading-weight);
+  line-height: var(--sp-heading-line-height);
+  color: var(--sp-text-color);
+  margin: 10px 0;
+}
+
+.strategic-priorities > div > div:first-child h4 strong {
+  font-weight: 700;
+}
+
+.strategic-priorities > div > div:first-child ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.strategic-priorities > div > div:first-child li {
+  font-size: var(--sp-paragraph-size);
+  line-height: var(--sp-paragraph-line-height);
+  color: var(--sp-text-color);
+  margin-bottom: 0;
+}
+
+/* Second column - future vision and media */
+.strategic-priorities > div > div:last-child h3 {
+  font-size: var(--sp-heading-size);
+  font-weight: var(--sp-heading-weight);
+  line-height: var(--sp-heading-line-height);
+  color: var(--sp-text-color);
+  margin: 10px 0;
+}
+
+.strategic-priorities > div > div:last-child h3 strong {
+  font-weight: 700;
+}
+
+.strategic-priorities > div > div:last-child p {
+  font-size: var(--sp-paragraph-size);
+  font-weight: 400;
+  line-height: var(--sp-paragraph-line-height);
+  color: var(--sp-text-color);
+  margin: 10px 0;
+}
+
+.strategic-priorities > div > div:last-child p strong {
+  font-weight: 700;
+}
+
+.strategic-priorities img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.strategic-priorities picture {
+  display: block;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .strategic-priorities > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--sp-gap);
+  }
+
+  .strategic-priorities > div > div {
+    order: unset;
+  }
+
+  .strategic-priorities > div > div:first-child {
+    flex: 0 0 56%;
+    max-width: 56%;
+    padding-right: 10px;
+  }
+
+  .strategic-priorities > div > div:last-child {
+    flex: 1;
+    max-width: 44%;
+    padding-top: 0;
+  }
+}
