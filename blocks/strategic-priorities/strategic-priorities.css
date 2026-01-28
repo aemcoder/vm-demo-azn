@@ -1,0 +1,132 @@
+/* Strategic Priorities Block - Design Tokens */
+.strategic-priorities {
+  --sp-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sp-text-color: rgb(60, 66, 66);
+  --sp-heading-size: 18px;
+  --sp-heading-weight: 300;
+  --sp-heading-line-height: 1.22;
+  --sp-body-size: 14px;
+  --sp-body-line-height: 1.43;
+  --sp-spacing: 10px;
+  --sp-gap: 24px;
+}
+
+/* Block container */
+.strategic-priorities {
+  font-family: var(--sp-font-family);
+  color: var(--sp-text-color);
+  font-size: var(--sp-body-size);
+  line-height: var(--sp-body-line-height);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  box-sizing: border-box;
+}
+
+.strategic-priorities > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-gap);
+}
+
+.strategic-priorities > div > div {
+  order: 1;
+}
+
+/* Content column (left) */
+.strategic-priorities .strategic-priorities-content {
+  flex: 1.6;
+}
+
+/* Media column (right) */
+.strategic-priorities .strategic-priorities-media {
+  flex: 1;
+}
+
+/* Typography - Headings - use higher specificity to override globals */
+.strategic-priorities h1,
+.strategic-priorities h2,
+.strategic-priorities h3,
+.strategic-priorities h4,
+.strategic-priorities h5,
+.strategic-priorities h6 {
+  font-family: var(--sp-font-family);
+  font-size: var(--sp-heading-size);
+  font-weight: var(--sp-heading-weight);
+  line-height: var(--sp-heading-line-height);
+  color: var(--sp-text-color);
+  margin: var(--sp-spacing) 0;
+}
+
+.strategic-priorities h3 b,
+.strategic-priorities h3 strong {
+  font-weight: 700;
+}
+
+/* Typography - Paragraphs */
+.strategic-priorities p {
+  font-family: var(--sp-font-family);
+  font-size: var(--sp-body-size);
+  line-height: var(--sp-body-line-height);
+  color: var(--sp-text-color);
+  margin: var(--sp-spacing) 0;
+}
+
+.strategic-priorities p b,
+.strategic-priorities p strong {
+  font-weight: 700;
+}
+
+/* Lists */
+.strategic-priorities ul,
+.strategic-priorities ol {
+  font-family: var(--sp-font-family);
+  font-size: var(--sp-body-size);
+  line-height: var(--sp-body-line-height);
+  color: var(--sp-text-color);
+  margin: var(--sp-spacing) 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.strategic-priorities li {
+  margin-bottom: 2px;
+  padding-left: 2px;
+}
+
+/* Images */
+.strategic-priorities img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.strategic-priorities picture {
+  display: block;
+}
+
+.strategic-priorities .strategic-priorities-img-col img {
+  display: block;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .strategic-priorities > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--sp-gap);
+  }
+
+  .strategic-priorities > div > div {
+    order: unset;
+  }
+
+  .strategic-priorities .strategic-priorities-content {
+    flex: 1.6;
+  }
+
+  .strategic-priorities .strategic-priorities-media {
+    flex: 1;
+  }
+}
